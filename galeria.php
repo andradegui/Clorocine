@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clorocine</title>
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -17,18 +19,15 @@
 
 <body>
 <nav class="nav-extended purple lighten-3">
-    <div class="nav-wrapper">
-
-      <div class="nav-header center">
-        <h1 class="brand-logo">Cloricine</h1>  
-      </div>
-      
-      
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <div class="nav-wrapper">                  
+      <ul id="nav-mobile" class="right">
         <li><a href="galeria.php">Galeria</a></li>
         <li><a href="cadastrar.php">Cadastrar</a></li>        
-      </ul>
+      </ul>      
     </div>
+    <div class="nav-header center">
+        <h1>CLOROCINE</h1>  
+      </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent purple darken-1">
         <li class="tab"><a class="active" href="#test1">Todos</a></li>
@@ -38,17 +37,43 @@
     </div>
   </nav>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">JavaScript</a></li>
-  </ul>
+  <div class="row">
+    <div class="col s3">
+      <div class="card hoverable">
+        <div class="card-image">
+          <img src="https://www.themoviedb.org/t/p/w300/zBXAjVMp92PvGovg148Qz0IjrEF.jpg">
+          
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
+        </div>
+        <div class="card-content">
+          <p  class="valign-wrapper">
+            <i class="material-icons amber-text">star</i>10
+          </p>
+          <span class="card-title">Vingadores</span>
+          <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>          
+        </div>
+      </div>       
+    </div>  
 
-  <div id="test1" class="col s12">Test 1</div>
-  <div id="test2" class="col s12">Test 2</div>
-  <div id="test3" class="col s12">Test 3</div>
-  <div id="test4" class="col s12">Test 4</div>
-        
+    <div class="col s3">
+      <div class="card hoverable">
+        <div class="card-image">
+          <img src="https://www.themoviedb.org/t/p/original/qhcwrnnCnN8NE1N6XXKHFmveJR9.jpg">
+          
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
+        </div>
+        <div class="card-content">
+          <p  class="valign-wrapper">
+            <i class="material-icons amber-text">star</i>10
+          </p>
+          <span class="card-title">Umbrella Academy</span>
+          <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>          
+        </div>
+      </div>       
+    </div>  
+
+  </div>
+
 
 </body>
 
