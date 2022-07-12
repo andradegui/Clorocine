@@ -1,38 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php include 'header.php'; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clorocine</title>
+<?php
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+$filme1 = [
+  "titulo" => "Vingadores 1",
+  "nota" => 8.6,
+  "sinopse" => "Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.",
+  "poster" => "https://www.themoviedb.org/t/p/original/u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg"
+];
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-</head>
+?>
 
 <body>
-<nav class="nav-extended purple lighten-3">
-    <div class="nav-wrapper">                  
+  <nav class="nav-extended purple lighten-3">
+    <div class="nav-wrapper">
       <ul id="nav-mobile" class="right">
-        <li><a href="galeria.php">Galeria</a></li>
-        <li><a href="cadastrar.php">Cadastrar</a></li>        
-      </ul>      
+        <li class="active"><a href="galeria.php">Galeria</a></li>
+        <li><a href="cadastrar.php">Cadastrar</a></li>
+      </ul>
     </div>
     <div class="nav-header center">
-        <h1>CLOROCINE</h1>  
-      </div>
+      <h1>CLOROCINE</h1>
+    </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent purple darken-1">
         <li class="tab"><a class="active" href="#test1">Todos</a></li>
         <li class="tab"><a href="#test2">Assistidos</a></li>
-        <li class="tab"><a href="#test3">Favoritos</a></li>        
+        <li class="tab"><a href="#test3">Favoritos</a></li>
       </ul>
     </div>
   </nav>
@@ -41,36 +35,36 @@
     <div class="col s3">
       <div class="card hoverable">
         <div class="card-image">
-          <img src="https://www.themoviedb.org/t/p/w300/zBXAjVMp92PvGovg148Qz0IjrEF.jpg">
-          
+          <img src="<?= $filme1['poster'] ?>">
+
           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
         </div>
         <div class="card-content">
-          <p  class="valign-wrapper">
-            <i class="material-icons amber-text">star</i>10
+          <p class="valign-wrapper">
+            <i class="material-icons amber-text">star</i> <?= $filme1['nota'] ?>
           </p>
-          <span class="card-title">Vingadores</span>
-          <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>          
+          <span class="card-title"><?= $filme1['titulo'] ?></span>
+          <p><?= $filme1['sinopse'] ?></p>
         </div>
-      </div>       
-    </div>  
+      </div>
+    </div>
 
     <div class="col s3">
       <div class="card hoverable">
         <div class="card-image">
           <img src="https://www.themoviedb.org/t/p/original/qhcwrnnCnN8NE1N6XXKHFmveJR9.jpg">
-          
+
           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
         </div>
         <div class="card-content">
-          <p  class="valign-wrapper">
+          <p class="valign-wrapper">
             <i class="material-icons amber-text">star</i>10
           </p>
           <span class="card-title">Umbrella Academy</span>
-          <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>          
+          <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>
         </div>
-      </div>       
-    </div>  
+      </div>
+    </div>
 
   </div>
 
