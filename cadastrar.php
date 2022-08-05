@@ -21,7 +21,7 @@
     </nav>
 
     <div class="row">
-        <form class="col s12" action="inserirFilme.php">
+        <form class="col s12" action="inserirFilme.php" method="POST">
             <div class="col s6 offset-s3">
                 <div class="card">
                     <div class="card-content white-text">
@@ -51,9 +51,9 @@
                         </div>
                         <!-- Capa -->
                         <div class="file-field input-field">
-                            <div class="btn purple lighten-2">
+                            <div class="btn purple lighten-2 black-text">
                                 <span>Capa</span>
-                                <input type="file">
+                                <input class="file-path validate" type="text">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text" name="poster">
