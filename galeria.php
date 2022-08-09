@@ -2,9 +2,8 @@
 
 <?php
 
-$bd = new SQLite3('filmes.db');
-$sql = "SELECT * from filmes";
-$filmes = $bd->query($sql);
+$filmesRepository = new FilmesRepositoryPDO();
+$filmes = $filmesRepository->listarTodos();
 
 $filme1 = [
   "titulo" => "Vingadores 1",
@@ -52,32 +51,29 @@ $filme3 = [
   </nav>
 
   <div class="container">
-  <div class="row">
+    <div class="row">
 
-    <?php while($filme = $filmes->fetchArray()) : ?>
+      <?php while($filme = $filmes->fetchArray()) : ?>
 
-      <div class="col s12 m6 l3">
-        <div class="card hoverable">
-          <div class="card-image">
-            <img src="<?= $filme['poster'] ?>">
-            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
-          </div>
-          <div class="card-content">
-            <p class="valign-wrapper">
-              <i class="material-icons amber-text">star</i> <?= $filme['nota'] ?>
-            </p>
-            <span class="card-title"><?= $filme['titulo'] ?></span>
-            <p><?= $filme['sinopse'] ?></p>
+        <div class="col s12 m6 l3">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="<?= $filme['poster'] ?>">
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
+            </div>
+            <div class="card-content">
+              <p class="valign-wrapper">
+                <i class="material-icons amber-text">star</i> <?= $filme['nota'] ?>
+              </p>
+              <span class="card-title"><?= $filme['titulo'] ?></span>
+              <p><?= $filme['sinopse'] ?></p>
+            </div>
           </div>
         </div>
-      </div>
 
-    <?php endwhile ?>
+      <?php endwhile ?>
 
-  </div>
-
-
-
+    </div>
   </div>
 
 </body>

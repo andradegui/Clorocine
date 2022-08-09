@@ -20,57 +20,62 @@
         </div>
     </nav>
 
-    <div class="row">
-        <form class="col s12" action="inserirFilme.php" method="POST">
-            <div class="col s6 offset-s3">
-                <div class="card">
-                    <div class="card-content white-text">
-                        <span class="card-title">Cadastrar Filme</span>
-                        <!-- Titulo -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="titulo" name="titulo" type="text" class="validate" required>
-                                <label for="titulo">Título do filme</label>
-                            </div>
-                        </div>
-                        <!-- Sinopse -->
-                        <div class="row">
+    <div class="container">
+        <div class="row">
+            <form class="col s12" action="inserirFilme.php" method="POST">
+                <div class="col s6 offset-s3">
+                    <div class="card">
+                        <div class="card-content white-text">
+                            <span class="card-title">Cadastrar Filme</span>
+                            <!-- Titulo -->
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <textarea id="sinopse" name="sinopse" class="materialize-textarea"></textarea>
-                                    <label for="sinopse">Sinopse</label>
+                                    <input id="titulo" name="titulo" type="text" class="validate" required>
+                                    <label for="titulo">Título do filme</label>
+                                </div>
+                            </div>
+                            <!-- Sinopse -->
+                            <div class="row">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="sinopse" name="sinopse" class="materialize-textarea"></textarea>
+                                        <label for="sinopse">Sinopse</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- nota -->
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <input id="nota" name="nota" type="number" step=".1" min=0 max=10 class="validate" required>
+                                    <label for="nota">Nota</label>
+                                </div>
+                            </div>
+                            <!-- Capa -->
+                            <div class="file-field input-field">
+                                <div class="btn purple lighten-2 black-text">
+                                    <span>Capa</span>
+                                    <input class="file-path validate" type="text">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" name="poster">
                                 </div>
                             </div>
                         </div>
-                        <!-- nota -->
-                        <div class="row">
-                            <div class="input-field col s4">
-                                <input id="nota" name="nota" type="number" step=".1" min=0 max=10 class="validate" required>
-                                <label for="nota">Nota</label>
-                            </div>
+                        <!-- Botões -->
+                        <div class="card-action">
+                            <a class="btn waves-effect waves-light grey" href="galeria.php">Cancelar</a>
+                            <button type="submit" class="btn waves-effect waves-light purple">Confirmar</button>
                         </div>
-                        <!-- Capa -->
-                        <div class="file-field input-field">
-                            <div class="btn purple lighten-2 black-text">
-                                <span>Capa</span>
-                                <input class="file-path validate" type="text">
-                            </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text" name="poster">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Botões -->
-                    <div class="card-action">
-                        <a class="btn waves-effect waves-light grey" href="galeria.php">Cancelar</a>
-                        <button type="submit" class="btn waves-effect waves-light purple">Confirmar</button>
                     </div>
                 </div>
-            </div>
 
-        </form>
+            </form>
+        </div>
+
     </div>
+
 
 </body>
 
 </html>
+
