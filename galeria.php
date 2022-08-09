@@ -82,4 +82,12 @@ $filme3 = [
 
 </body>
 
+<?php if(isset($_GET["msg"])) : ?>
+  <script>
+      M.toast({
+          html: '<?= $_GET["msg"] ?>'
+      });
+  </script>
+<?php endif ?>
+
 </html>
