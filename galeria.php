@@ -2,8 +2,11 @@
 
 <?php
 
+require "./repository/filmesRepositoryPDO.php";
+
 $filmesRepository = new FilmesRepositoryPDO();
 $filmes = $filmesRepository->listarTodos();
+
 
 $filme1 = [
   "titulo" => "Vingadores 1",
@@ -53,7 +56,7 @@ $filme3 = [
   <div class="container">
     <div class="row">
 
-      <?php while($filme = $filmes->fetchArray()) : ?>
+      <?php foreach($filmes as $filme) : ?>
 
         <div class="col s12 m6 l3">
           <div class="card hoverable">
@@ -71,7 +74,7 @@ $filme3 = [
           </div>
         </div>
 
-      <?php endwhile ?>
+      <?php endforeach ?>
 
     </div>
   </div>

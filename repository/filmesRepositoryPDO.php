@@ -1,6 +1,6 @@
 <?php
 
-include "../model/filme.php";
+require "conexao.php";
 
 class FilmesRepositoryPDO{
     
@@ -12,7 +12,7 @@ class FilmesRepositoryPDO{
         $sql = "SELECT * from filmes";
         $filmes = $bd->query($sql);
         while($filme = $filmes->fetchArray()){
-            array_push($filmesLista, $filmesLista);
+            array_push($filmesLista, $filmes);
         }
 
         return $filmesLista;
