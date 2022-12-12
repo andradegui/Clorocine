@@ -1,7 +1,6 @@
 <?php
 
-require "conexao.php";
-
+require "./Conexao.php";
 class FilmesRepositoryPDO{
     
     public function listarTodos():array{
@@ -12,7 +11,7 @@ class FilmesRepositoryPDO{
         $sql = "SELECT * from filmes";
         $filmes = $bd->query($sql);
         while($filme = $filmes->fetchArray()){
-            array_push($filmesLista, $filmes);
+            array_push($filmesLista, $filme);
         }
 
         return $filmesLista;

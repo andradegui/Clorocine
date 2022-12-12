@@ -6,6 +6,7 @@ require "./repository/filmesRepositoryPDO.php";
 
 $filmesRepository = new FilmesRepositoryPDO();
 $filmes = $filmesRepository->listarTodos();
+var_dump($filmes);
 
 
 $filme1 = [

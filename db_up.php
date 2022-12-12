@@ -52,7 +52,7 @@ $sql = "SELECT * from filmes";
 $rs = $bd->query($sql);
 
 while ($filme = $rs->fetchArray()){
-
+    
 }
 
 // manipular dados -> exec na query
