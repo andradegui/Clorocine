@@ -5,7 +5,7 @@
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="right">
                 <li><a href="galeria.php">Galeria</a></li>
-                <li class="active"><a href="cadastrar.php">Cadastrar</a></li>
+                <li class="active"><a href="/">Cadastrar</a></li>
             </ul>
         </div>
         <div class="nav-header center">
@@ -22,7 +22,7 @@
 
     <div class="container">
         <div class="row">
-            <form class="col s12" action="inserirFilme.php" method="POST">
+            <form class="col s12" method="POST">
                 <div class="col s6 offset-s3">
                     <div class="card">
                         <div class="card-content white-text">
