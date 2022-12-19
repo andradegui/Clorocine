@@ -1,24 +1,33 @@
 <?php
 
+//Configurações de rotas da aplicação
+
 $rota = $_SERVER["REQUEST_URI"];
 $metodo = $_SERVER["REQUEST_METHOD"];
 
 require "./controller/FilmesController.php";
 
-switch($rota){
-    case "/":
-        require "views/galeria.php";
-        break;
-    
-    case "/novo":
-        if($metodo == "GET") require "views/cadastrar.php";
-        if($metodo == "POST") {
-            $controller = new FilmesController();
-            $controller->save($_REQUEST);
-        };
-        break;
-
-    default:
-        require "views/404.php";
-        break;
+if($rota === "/"){
+    require "views/galeria.php";    
+    exit();
 }
+
+if($rota === "/novo"){
+    if($metodo == "GET") require "views/cadastrar.php";
+
+    if($metodo == "POST") {
+        $controller = new FilmesController();
+        $controller->save($_REQUEST);
+    };
+
+    exit();
+}
+
+//substr irá verificar se os 11 primeiros caracteres da string rota, é igual a string "/favoritar"
+if(substr($rota, 0, strlen("/favoritar")) === "/favoritar"){
+    $controller = new FilmesController();
+    $controller->favorite(basename($rota));
+    exit();
+}
+
+require "views/404.php";

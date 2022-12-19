@@ -26,7 +26,7 @@ class FilmesRepositoryPDO{
     public function salvar($filme):bool{
      
         $sql = "INSERT INTO filmes (titulo, sinopse, nota, poster) 
-        VALUES (:titulo, :sinopse, :nota, :poster)";
+                VALUES (:titulo, :sinopse, :nota, :poster)";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(':titulo', $filme->titulo, PDO::PARAM_STR);
@@ -36,6 +36,19 @@ class FilmesRepositoryPDO{
 
         return $stmt->execute();
 
+    }
+
+    public function favoritar(int $id){
+
+        $sql = "UPDATE filmes SET favoritos = NOT favorito WHERE id=:id";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+        if( $stmt->execute()){
+            return "ok";
+        } else{
+            return "erro";
+        }
     }
 
 }
