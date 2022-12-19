@@ -4,7 +4,7 @@
     <nav class="nav-extended purple lighten-3">
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="right">
-                <li><a href="galeria.php">Galeria</a></li>
+                <li><a href="/">Galeria</a></li>
                 <li class="active"><a href="/">Cadastrar</a></li>
             </ul>
         </div>
@@ -22,7 +22,7 @@
 
     <div class="container">
         <div class="row">
-            <form class="col s12" method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 <div class="col s6 offset-s3">
                     <div class="card">
                         <div class="card-content white-text">
@@ -54,7 +54,7 @@
                             <div class="file-field input-field">
                                 <div class="btn purple lighten-2 black-text">
                                     <span>Capa</span>
-                                    <input class="file-path validate" type="text">
+                                    <input type="file" name="poster_file">
                                     <!-- <input class="file-path validate" type="file"> -->
                                 </div>
                                 <div class="file-path-wrapper">

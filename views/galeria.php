@@ -3,13 +3,10 @@
 <?php
 
 session_start();
-
-require "./repository/filmesRepositoryPDO.php";
 require "./utils/mensagem.php";
 
-
-$filmesRepository = new FilmesRepositoryPDO();
-$filmes = $filmesRepository->listarTodos();
+$controller = new FilmesController();
+$filmes = $controller->index();
 
 ?>
 
