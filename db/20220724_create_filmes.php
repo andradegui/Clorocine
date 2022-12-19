@@ -33,21 +33,6 @@ if ( $bd->exec($sql) )
 else
     echo "\nErro ao inserir filme\n"; 
 
-
-$sql = "INSERT INTO filmes (id, titulo, poster, sinopse, nota) VALUES (
-    2, 
-    'Peaky Blinders',
-    'https://www.themoviedb.org/t/p/original/i0uajcHH9yogXMfDHpOXexIukG9.jpg',
-    'Mussum Ipsum, cacilds vidis litro abertis. Per aumento de cachacis, eu reclamis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Suco de cevadiss deixa as pessoas mais interessantis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Mé faiz elementum girarzis, nisi eros vermeio.',
-    9.8
-)";
-
-
-if ( $bd->exec($sql) ) 
-    echo "\nSucesso ao inserir filme\n"; 
-else
-    echo "\nErro ao inserir filme\n"; 
-        
 $sql = "SELECT * from filmes";
 $rs = $bd->query($sql);
 
