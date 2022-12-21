@@ -40,7 +40,7 @@ class FilmesRepositoryPDO{
 
     public function favoritar(int $id){
 
-        $sql = "UPDATE filmes SET favoritos = NOT favorito WHERE id=:id";
+        $sql = "UPDATE filmes SET favorito = NOT favorito WHERE id=:id";
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 
@@ -48,7 +48,7 @@ class FilmesRepositoryPDO{
             return "ok";
         } else{
             return "erro";
-        }
+        }             
     }
 
 }

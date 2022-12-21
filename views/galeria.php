@@ -39,7 +39,9 @@ $filmes = $controller->index();
           <div class="card hoverable">
             <div class="card-image">
               <img src="<?= $filme->poster ?>">
-              <a data-id="<?= $filme->id ?>" class="btn-fav btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons"><?= ($filme->favorito) ? "favorite" : "favorite_border" ?></i></a>
+              <a class="btn-fav btn-floating halfway-fab waves-effect waves-light red" data-id="<?= $filme->id ?>">
+                <i class="material-icons"><?= ($filme->favorito) ? "favorite" : "favorite_border" ?></i>
+              </a>
             </div>
             <div class="card-content">
               <p class="valign-wrapper">
@@ -80,10 +82,12 @@ $filmes = $controller->index();
             }
           })
           //Caso o atributo não for "ok", retorno uma mensagem pro usuário de erro ao favoritar
-          .catch(error => {})
+          .catch(error => {
             M.toast({
               html: 'Erro ao favoritar'
             });
+          })
+
       });
     });
   </script>
