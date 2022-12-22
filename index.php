@@ -30,4 +30,15 @@ if(substr($rota, 0, strlen("/favoritar")) === "/favoritar"){
     exit();
 }
 
+if(substr($rota, 0, strlen("/filmes")) === "/filmes"){
+    if($metodo == "GET") require "views/galeria.php";
+
+    if($metodo == "DELETE") {
+        $controller = new FilmesController();
+        $controller->delete(basename($rota));
+    
+    }
+    exit();
+}
+
 require "views/404.php";
